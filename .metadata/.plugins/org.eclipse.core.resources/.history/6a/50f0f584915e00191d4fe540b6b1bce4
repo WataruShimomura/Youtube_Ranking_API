@@ -1,0 +1,18 @@
+package wshimomura.back.youtuberankingapi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DateOutputTest {
+
+	@Test
+	public void test() {
+		DateOutput test = new DateOutput();
+		
+		String ans = test.Test();
+		
+		System.out.println(ans);
+	}
+
+}

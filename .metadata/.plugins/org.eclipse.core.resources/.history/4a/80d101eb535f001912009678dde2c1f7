@@ -1,0 +1,17 @@
+package wshimomura.back.youtuberankingapi;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class DataInput {
+
+	public String getInputQuery() throws IOException {
+		String inputQuery = "";
+
+		System.out.print("Please enter a search term: ");
+		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+		inputQuery = bReader.readLine();
+	}
+
+}

@@ -1,0 +1,14 @@
+package wshimomura.back.youtuberankingapi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DateOutputTest {
+
+	@Test
+	public void test() {
+		fail("まだ実装されていません");
+	}
+
+}

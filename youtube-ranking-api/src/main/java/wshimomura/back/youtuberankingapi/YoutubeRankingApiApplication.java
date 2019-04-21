@@ -8,6 +8,7 @@ public class YoutubeRankingApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(YoutubeRankingApiApplication.class, args);
+		
 	}
 
 }

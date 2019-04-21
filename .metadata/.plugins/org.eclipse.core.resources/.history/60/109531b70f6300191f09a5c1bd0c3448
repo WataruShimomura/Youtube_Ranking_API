@@ -1,0 +1,49 @@
+package wshimomura.back.youtuberankingapi;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DataInput {
+
+	public static String getInputQuery() throws IOException {
+		String inputQuery = "";
+
+		System.out.print("検索キーワードを入力: ");
+		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+		inputQuery = bReader.readLine();
+		return inputQuery;
+	}
+
+	public static String getInputDate() throws IOException{
+		String inputQuery = "";
+
+		System.out.print("検索期間を選択\n"
+				+ "1 = 一日\n"
+				+ "2 = 一週間\n"
+				+ "3 = 一か月");
+		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+		inputQuery = bReader.readLine();
+
+
+		if(inputQuery = 1) {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Calendar time = Calendar.getInstance();
+
+			date.add(Date.DATE,-1);
+			String time = sdf.format(date);
+		}
+	}else {
+		if(inputQuery = 2) {
+
+		}
+		else {
+			if(inputQuery = 3) {
+
+			}
+		}
+	}
+
+}

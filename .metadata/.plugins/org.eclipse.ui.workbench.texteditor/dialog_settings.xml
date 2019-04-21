@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="setPublishedAfter" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="setPublishedAfter"/>
+			<item value="setQ"/>
+			<item value="set"/>
+			<item value="publishedAfter"/>
+			<item value="Iterator"/>
+			<item value="iteratorSearchResults"/>
+			<item value="YouTube.Search.List"/>
+			<item value="search.set"/>
+			<item value="search."/>
+			<item value="search"/>
+			<item value="youtube.pro"/>
+			<item value="Please enter a search term"/>
+			<item value="There"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="330" key="DIALOG_WIDTH"/>
+		<item value="1|Yu Gothic UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Yu Gothic UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="441" key="DIALOG_X_ORIGIN"/>
+		<item value="417" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
