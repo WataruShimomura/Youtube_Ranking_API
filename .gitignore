@@ -35,5 +35,5 @@ bin
 *.log
 *.swp
 *.bak
-.metadata
-.recommenders
+/.metadata/
+/.recommenders/
