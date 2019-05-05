@@ -64,7 +64,7 @@ public class InformationProcessing {
 		YouTube.Search.List search = youtube.search().list("id,snippet");
 
 		//APIキー（注意：gitにpullする際は情報を空にしておくこと）
-		search.setKey("AIzaSyAro_oITBRyLK7keDUe-4SBaFept9u8UkM");
+		search.setKey("");
 		//検索キーワード
 		search.setQ(query);
 		//検索対象を動画のみを指定（プレイリストやチャンネルは除外する）
