@@ -44,20 +44,13 @@ public class DataInput {
 	 *
 	 * @throws IOException
 	 */
-	public static DateTime getInputDate() throws IOException {
-		String inputQuery = "";
-
-		System.out.print("検索期間を選択\n"
-				+ "1 = 一日\n"
-				+ "2 = 一週間\n"
-				+ "3 = 一か月");
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-		inputQuery = bReader.readLine();
+	public static DateTime getInputDate(String dateQuery) throws IOException {
+		String inputQuery = dateQuery;
+		Date date = new Date();
+		Calendar time = Calendar.getInstance();
+		time.setTime(date);
 
 		if (inputQuery == "1") {
-			Date date = new Date();
-			Calendar time = Calendar.getInstance();
-			time.setTime(date);
 
 			time.add(Calendar.DAY_OF_MONTH, -1);
 
@@ -69,9 +62,6 @@ public class DataInput {
 
 		} else {
 			if (inputQuery == "2") {
-				Date date = new Date();
-				Calendar time = Calendar.getInstance();
-				time.setTime(date);
 
 				time.add(Calendar.WEEK_OF_MONTH, -1);
 
@@ -82,9 +72,6 @@ public class DataInput {
 				return dateTimeSetRtu;
 			} else {
 				if (inputQuery == "3") {
-					Date date = new Date();
-					Calendar time = Calendar.getInstance();
-					time.setTime(date);
 
 					time.add(Calendar.MONTH, -1);
 
@@ -95,9 +82,6 @@ public class DataInput {
 					return dateTimeSetRtu;
 				}
 				//コンパイルエラー回避のため取り急ぎ期間一か月指定
-				Date date = new Date();
-				Calendar time = Calendar.getInstance();
-				time.setTime(date);
 
 				time.add(Calendar.MONTH, -1);
 
