@@ -3,6 +3,7 @@ package wshimomura.back.youtuberankingapi;
 import java.io.IOException;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +34,7 @@ public class InformationProcessing {
 	private static final JsonFactory JSON_FACTORY = new JacksonFactory();
 
 	/**返される動画の最大数のグローバルインスタンス */
-	private static final long NUMBER_OF_VIDEOS_RETURNED = 25;
+	private static final long NUMBER_OF_VIDEOS_RETURNED = 10;
 
 	/**すべてのAPIリクエストを行うためのYoutubeオブジェクトのグローバルインスタンス。 */
 	private static YouTube youtube;
@@ -48,6 +49,7 @@ public class InformationProcessing {
 	 *検索条件を指定後、youtube.searchメソッドにより情報をセットし、
 	 *検索結果をsearchResultListリストに格納し、prettyPrintを呼び出す。
 	 */
+	@CrossOrigin
 	@GetMapping("/test")
 	public static List<VideoResource> main(@RequestParam("query") String query, @RequestParam("date") String date)
 			throws IOException {
@@ -71,9 +73,9 @@ public class InformationProcessing {
 		//検索期間を指定
 		search.setPublishedAfter(period);
 		//検索する動画の情報を指定
-		//		search.setFields(
-		//				"items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url/description,snippet)");
-		//表示されるされる動画の数を指定（現在２５）
+//				search.setFields(
+//						"items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url/description,snippet)");
+		//表示されるされる動画の数を指定（現在10）
 		search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
 		SearchListResponse searchResponse = search.execute();
 

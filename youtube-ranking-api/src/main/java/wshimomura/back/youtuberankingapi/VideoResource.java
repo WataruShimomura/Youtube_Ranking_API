@@ -9,8 +9,8 @@ public class VideoResource implements Serializable {
 	private String videoUrl;
 	private String title;
 	private String thumbnail;
-	private String comment;
-	private String date;
+//	private String comment;
+//	private String date;
 
 	public String getVideoUrl() {
 		return videoUrl;
@@ -36,32 +36,32 @@ public class VideoResource implements Serializable {
 		this.thumbnail = thumbnail;
 	}
 
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
+//	public String getComment() {
+//		return comment;
+//	}
+//
+//	public void setComment(String comment) {
+//		this.comment = comment;
+//	}
+//
+//	public String getDate() {
+//		return date;
+//	}
+//
+//	public void setDate(String date) {
+//		this.date = date;
+//	}
 
 	public VideoResource() {
 		super();
 	}
 
-	public void setParameter(String videoUrl, String title, String thumbnail, String comment, String date) {
+	public void setParameter(String videoUrl, String title, String thumbnail) {
 		this.videoUrl = videoUrl;
 		this.title = title;
 		this.thumbnail = thumbnail;
-		this.comment = comment;
-		this.date = date;
+//		this.comment = comment;
+//		this.date = date;
 	}
 
 }
