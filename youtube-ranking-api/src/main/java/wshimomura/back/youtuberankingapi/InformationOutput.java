@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.google.api.client.util.DateTime;
 import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
@@ -26,7 +25,7 @@ public class InformationOutput {
 	 * 検索ワード
 	 *
 	 */
-	static List<VideoResource> prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
+	public static List<VideoResource> prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
 
 		List<VideoResource> resultVideoResource = new ArrayList<>();
 
@@ -51,12 +50,12 @@ public class InformationOutput {
 
 				String thumbnailUrl = thumbnail.getUrl();
 
-				String comment = singleVideo.getSnippet().getDescription();
+//				String comment = singleVideo.getSnippet().getDescription();
+//
+//				DateTime dt = singleVideo.getSnippet().getPublishedAt();
+//				String datetime = dt.toString();
 
-				DateTime dt = singleVideo.getSnippet().getPublishedAt();
-				String datetime = dt.toString();
-
-				videoResource.setParameter(videoUrl, title, thumbnailUrl, comment, datetime);
+				videoResource.setParameter(videoUrl, title, thumbnailUrl);
 
 				resultVideoResource.add(videoResource);
 
@@ -67,9 +66,9 @@ public class InformationOutput {
 				//動画のサムネイルURL
 				System.out.println(" Thumbnail: " + thumbnail.getUrl());
 				//動画のコメント
-				System.out.println(" Comment: " + singleVideo.getSnippet().getDescription());
+				//System.out.println(" Comment: " + singleVideo.getSnippet().getDescription());
 				//動画の投稿日（出力する際はDatetimeクラス）
-				System.out.println(" Comment: " + singleVideo.getSnippet().getPublishedAt());
+				//System.out.println(" Comment: " + singleVideo.getSnippet().getPublishedAt());
 				System.out.println(
 						"\n-------------------------------------------------------------\n");
 			}
