@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     $('#search').on('click',function(){
+    	$("#main-content").empty();
         let keyword = $('#keyword').val();
         let date =  $("input[name='radio']:checked").val();
           $.ajax({
