@@ -5,7 +5,7 @@ $(document).ready(function(){
         let keyword = $('#keyword').val();
         let date =  $("input[name='radio']:checked").val();
           $.ajax({
-              url:'http://http://160.16.231.123:8080/test?'+'query='+keyword+'&date='+date,
+              url:'http://160.16.231.123:8080/test?'+'query='+keyword+'&date='+date,
               type:'GET',
               async: false,
               dataType: "json",
@@ -27,10 +27,14 @@ $(document).ready(function(){
     	        $('input[name=radio]:eq(0)').prop('checked', true);
     	    	$('input[name=radio]:eq(1)').prop('checked', false);
     	    	$('input[name=radio]:eq(2)').prop('checked', false);
-    	    } else if ($('input[name=radio]:eq(0)').prop('checked')) {
-    	        $('input[name=radio]:eq(0)').prop('checked', true);
-    	    	$('input[name=radio]:eq(1)').prop('checked', false);
-    	    	$('input[name=radio]:eq(2)').prop('checked', false);    	    }else{
+    	    } else if ($('input[name=radio]:eq(1)').prop('checked')) {
+    	        $('input[name=radio]:eq(0)').prop('checked', false);
+    	    	$('input[name=radio]:eq(1)').prop('checked', true);
+    	    	$('input[name=radio]:eq(2)').prop('checked', false);
+    	    }else{
+    	    	$('input[name=radio]:eq(0)').prop('checked', false);
+        	    $('input[name=radio]:eq(1)').prop('checked', false);
+        	    $('input[name=radio]:eq(2)').prop('checked', true);
 
     	    }
     });
